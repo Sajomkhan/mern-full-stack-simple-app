@@ -4,7 +4,7 @@
 <!-- ### Go to Live Project: https://food-shop-app-react-tailwined.netlify.app/ -->
 <!-- [![image](screenshot.JPG)](https://food-shop-app-react-tailwined.netlify.app/) -->
 
-![Screenshot](/clint/ScreenShoot.png)
+![Screenshot](/clint/ScreenShoot.jpg)
 
 
 ### Mearn Full Stack Simple App
