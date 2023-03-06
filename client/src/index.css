@@ -95,6 +95,23 @@ h4 {
 }
 
 .addPopup {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 60px auto;
+
+	width: 200px;
+	height: 50px;
+	border-radius: 999px;
+	font-size: 22px;
+	font-weight: 600;
+	color: var(--light);
+	background-color: var(--primary);
+	background-image: linear-gradient(to bottom right, var(--primary), var(--secondary));
+	cursor: pointer;
+}
+/* 
+.addPopup {
 	position: fixed;
 	bottom: 32px;
 	right: 32px;
@@ -111,7 +128,7 @@ h4 {
 	background-color: var(--primary);
 	background-image: linear-gradient(to bottom right, var(--primary), var(--secondary));
 	cursor: pointer;
-}
+} */
 
 .popup {
 	position: fixed;
