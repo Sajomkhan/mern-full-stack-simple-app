@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react'
 
-const api_base = "http://localhost:3001";
+const BASE_URL = "https://mern-stack-todos-app.onrender.com";
+// const BASE_URL = "http://localhost:3001";
 
 function App() {
   const[todos, setTodos] = useState([]);
@@ -12,14 +13,14 @@ function App() {
 	}, []);
 
 	const GetTodos = () => {
-		fetch(api_base + '/todos')
+		fetch(BASE_URL + '/todos')
 			.then(res => res.json())
 			.then(data => setTodos(data))
 			.catch((err) => console.error("Error: ", err));
 	}
 
   const completeTodo = async (id) => {
-    const data = await fetch(api_base + '/todo/complete/' + id)
+    const data = await fetch(BASE_URL + '/todo/complete/' + id)
     .then(res => res.json());
 
     setTodos(todos => todos.map(todo => {
@@ -31,20 +32,19 @@ function App() {
   }
 
   const deleteTodo = async (id) => {
-    const data = await fetch(api_base + '/todo/delete/' + id, {method: "DELETE"})
+    const data = await fetch(BASE_URL + '/todo/delete/' + id, {method: "DELETE"})
     .then(res => res.json());
 
 	setTodos(todos => todos.filter(todo => todo._id !== data._id))
   }
   const addTodo = async () => {
-    const data = await fetch(api_base + '/todo/new/', {
+    const data = await fetch(BASE_URL + '/todo/new/', {
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json"
 		},
 		body: JSON.stringify({
 			text: newTodo,
-			complete: false
 		})
 	}).then(res => res.json());
 
@@ -53,7 +53,7 @@ function App() {
 	setNewTodo("");
   }
 
-  popupActive && (onkeydown = (e) => {
+  popupActive && (onkeyup = (e) => {
 		if(e.keyCode === 13){
 			addTodo()
 		}
@@ -61,7 +61,7 @@ function App() {
 
   return (
 		<div className="App">
-			<h1>Welcome, Tyler</h1>
+			<h1>Welcome, Saiful Ajom Khan</h1>
 			<h4>Your tasks</h4>
 
 			<div className="todos">
@@ -80,9 +80,9 @@ function App() {
 				)) : (
 					<p>You currently have no tasks</p>
 				)}
+				<div className="addPopup" onClick={() => setPopupActive(true)}>Add Task</div>
 			</div>
 
-			<div className="addPopup" onClick={() => setPopupActive(true)}>+</div>
 
 			{popupActive ? (
 				<div className="popup">
