@@ -7,7 +7,7 @@ const TodoSchema = new mongoose.Schema({
     },
     complete: {
         type: Boolean,
-        require: true
+        default: false
     },
     timestamp: {
         type: String,
