@@ -1,20 +1,25 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const bodyParser = require('body-parser')
 
 const app = express();
-
 const Todo = require('./models/Todo');
 
-app.use(express.json());
+const PORT = process.env.PORT || 3001
+const DTABASE = process.env.DTABASE
+
 app.use(cors());
-//for form data receiving
-app.use(express.urlencoded({extented: true}))
+// app.use(express.urlencoded({ extended: true }))
+// app.use(bodyParser.json());
+app.use(express.json());
+app.use(express.urlencoded({extented: true}));
 
 // connect with DB
 const connectDB = async() => {
     try {
-        await mongoose.connect('mongodb://127.0.0.1:27017/todosDB')
+        await mongoose.connect(DTABASE)
         console.log("db is connected");
     } catch (error) {
         console.log("db is not connected");
@@ -23,8 +28,8 @@ const connectDB = async() => {
     }
 }
 
-app.listen(3001, ()=>{
-    console.log(`server is running at http://localhost:3001`);
+app.listen(PORT, ()=>{
+    console.log(`server is running at http://localhost:${PORT}`);
     connectDB()
 })
 
@@ -47,10 +52,8 @@ app.delete('/todo/delete/:id', async (req, res) => {
 
 app.get('/todo/complete/:id', async (req, res) => {
     const todo = await Todo.findById(req.params.id)
-    
+
     todo.complete = !todo.complete;
-
     todo.save();
-
     res.json(todo);
 })
