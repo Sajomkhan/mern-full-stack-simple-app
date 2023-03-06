@@ -1,10 +1,11 @@
 # Products List App with React-Redux & Redux-Toolkit
 <!-- ### It's a Full Mobile Responsive App -->
 
-<!-- ### Go to Live Project: https://food-shop-app-react-tailwined.netlify.app/ -->
-<!-- [![image](screenshot.JPG)](https://food-shop-app-react-tailwined.netlify.app/) -->
+### Go to Live Project: https://mern-stock-todos-app.netlify.app/
+<!-- [![image](screenshot.JPG)](https://mern-stock-todos-app.netlify.app/) -->
+<!-- ![Screenshot](client/ScreenShoot.jpg) -->
 
-![Screenshot](client/ScreenShoot.jpg)
+[![image](client/ScreenShoot.jpg](https://mern-stock-todos-app.netlify.app/
 
 
 ### Mearn Full Stack Simple App
