@@ -5,7 +5,7 @@
 <!-- [![image](screenshot.JPG)](https://mern-stock-todos-app.netlify.app/) -->
 <!-- ![Screenshot](client/ScreenShoot.jpg) -->
 
-[![image](client/image.jpg)](https://mern-stock-todos-app.netlify.app/)
+[![image](client/Image.jpg)](https://mern-stock-todos-app.netlify.app/)
 
 
 ### Mearn Full Stack Simple App
