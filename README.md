@@ -14,8 +14,6 @@
 * Express.js
 * MongoDB
 * Mongoose
-* Cors
-* React-Redux
 
 ##### It’s may be very simple but It is very important and fundamental to integrating Frontend and Backend.
 ##### I am intermediate level in Frontend but Backend was trying hard.
