@@ -3,7 +3,7 @@
 
 ### Go to Live Project: https://mern-stock-todos-app.netlify.app/
 <!-- [![image](screenshot.JPG)](https://mern-stock-todos-app.netlify.app/) -->
-![Capture.JPG](/Capture.JPG) -->
+<!--![Capture.JPG](/Capture.JPG) -->
 
 [![image](client/Image.jpg)](https://mern-stock-todos-app.netlify.app/)
 
